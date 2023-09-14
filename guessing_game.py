@@ -1,3 +1,4 @@
+# simple guessing (number) game in python
 import random
 
 print('I picked a random number between 1 and 100.')
