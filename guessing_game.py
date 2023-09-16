@@ -1,3 +1,4 @@
+#simple guessing (number) game in python
 #This line imports the random module, which allows you to generate random numbers.
 import random
 
