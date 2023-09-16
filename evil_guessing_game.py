@@ -37,17 +37,3 @@ if left != right or player != left:
     pc = random.randint(left, right)
     print('The correct number was ' + str(pc) + '.')
 else: print('Game over! You are a bad player! Boooo!')
-
-
-##if condition_1:
-##    print()
-##elif condition_2:
-##    print()
-##elif condition_3:
-##    print()
-##elif condition_4:
-##    print()
-##else:
-##    print()
-##
-##print('After the if!')
