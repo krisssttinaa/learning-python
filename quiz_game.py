@@ -17,6 +17,7 @@ def new_game():
 
     display_score(correct_guesses, guesses)
 
+
 def check_answer(answer, guess):
     if answer == guess:
         print("CORRECT!")
@@ -25,6 +26,7 @@ def check_answer(answer, guess):
         print("WRONG!")
         return 0
     
+
 def display_score(correct_guesses, guesses):
     print("--------------")
     print("RESULTS")
@@ -42,8 +44,16 @@ def display_score(correct_guesses, guesses):
     score = int((correct_guesses/len(questions))*100)
     print("Your score is: "+str(score)+"%")
 
+
 def play_again():
-    pass
+    response = input("Do you want to try again? (yes/no): ")
+    response = response.lower()
+
+    if response == "yes":
+        return True
+    else:
+        return False
+    
 
 questions = {
     "Who created Python?: ": "A",
@@ -52,6 +62,7 @@ questions = {
     "Is the Earth round?: ":"A"
 }
 
+
 options = [ 
     ["A. Guido van Rossum", "B. Elon Musk", "C. Bill Gates", "D. Mark Zucherburg"],
     ["A. 1989", "B. 1991", "C. 2000", "D. 2016"],
@@ -59,4 +70,10 @@ options = [
     ["A. True", "B. False", "C. Sometimes", "D. What's Earth?"]
 ]
 
+
 new_game()
+
+while play_again():
+    new_game()
+
+print("Byeeeee!")
