@@ -8,9 +8,9 @@ def new_game():
         print(key)
         for i in options[question_num-1]:
             print(i)
-        quess = input("Enter A, B, C, D: ")
-        quess= quess.upper()
-        guesses.append(quess)
+        guess = input("Enter A, B, C, D: ")
+        guess= guess.upper()
+        guesses.append(guess)
 
         correct_guesses += check_answer(questions.get(key),guess)
         question_num +=1
@@ -36,7 +36,7 @@ def display_score(correct_guesses, guesses):
 
     print("Guesses: ", end="")
     for i in guesses:
-        print(guesses.get(i), end=" ")
+        print(i, end="")
     print()
 
     score = int((correct_guesses/len(questions))*100)
@@ -54,7 +54,7 @@ questions = {
 
 options = [ 
     ["A. Guido van Rossum", "B. Elon Musk", "C. Bill Gates", "D. Mark Zucherburg"],
-    ["A. 1989", "B. 1991", "C. 2000", "D. 2016"]
+    ["A. 1989", "B. 1991", "C. 2000", "D. 2016"],
     ["A. Lonely Island", "B. Smosh", "C. Monty Python", "D. SNL"],
     ["A. True", "B. False", "C. Sometimes", "D. What's Earth?"]
 ]
